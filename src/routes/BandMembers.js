@@ -1,18 +1,11 @@
-import { Typography } from '@mui/material'
+import GetBand from '../components/GetBand'
 
-
-function BandMembers() {
+function BandMembers() { 
   return (
     <div>
-    <Typography
-    variant='h1'
-    component='h1'
-    align='center'
-    color='secondary'
-    > Bandmembers
-    </Typography>
+      <GetBand />
     </div>
-  );
+  )
 }
 
-export default BandMembers;
+export default BandMembers

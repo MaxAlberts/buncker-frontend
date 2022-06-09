@@ -9,7 +9,9 @@ export default function ButtonAppBar() {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="sticky">
-        <Toolbar>
+        <Toolbar
+        sx={{justifyContent: 'center'}}
+        >
           <Link
           to='/band-members'
           >
