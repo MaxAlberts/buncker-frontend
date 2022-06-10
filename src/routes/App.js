@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { Box } from '@mui/system';
+import { Container } from '@mui/system';
 import { useEffect, useState } from 'react';
 import { Outlet } from 'react-router';
 import ButtonAppBar from '../components/ButtonAppBar';
@@ -23,10 +23,14 @@ useEffect(() => {
 
   return (
     <div>
-      <Box>
-        <img src={image} width='100%' height='100%' />
-      </Box>
-      <ButtonAppBar/>
+      <Container 
+      sx={{justifyContent: 'center'}} 
+      align='center'
+      position='fixed'
+      >
+        <img src={image} width='80%' height='300' />
+      </Container>
+      <ButtonAppBar sx={{height: 5000}}/>
       <Outlet/>
     </div>
   );

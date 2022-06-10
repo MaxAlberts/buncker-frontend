@@ -1,10 +1,11 @@
 import GetBand from '../components/GetBand'
+import { Container } from '@mui/system'
 
 function BandMembers() { 
   return (
-    <div>
+    <Container>
       <GetBand />
-    </div>
+    </Container>
   )
 }
 

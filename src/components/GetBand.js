@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { Typography } from "@mui/material";
 
 export default function GetBand() {
     const [title, setTitle] = useState([])
@@ -24,7 +25,18 @@ export default function GetBand() {
     
     return (
         <div>
+        <Typography
+        variant='h2'
+        align='center'
+        >
             {title}
+        </Typography>
+        <Typography
+        variant='h6'
+        align='left'
+        >
+            {text}
+        </Typography>
         </div>
     )
 }

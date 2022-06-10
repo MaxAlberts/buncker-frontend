@@ -5,6 +5,7 @@ import BandMembers from './routes/BandMembers';
 import Home from './routes/Home';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { CssBaseline } from '@mui/material';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

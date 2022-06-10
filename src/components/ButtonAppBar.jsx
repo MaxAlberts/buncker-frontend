@@ -7,35 +7,33 @@ import { Link } from 'react-router-dom';
 
 export default function ButtonAppBar() {
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="sticky">
-        <Toolbar
-        sx={{justifyContent: 'center'}}
-        >
-          <Link
-          to='/band-members'
+        <AppBar position="sticky">
+          <Toolbar
+          sx={{justifyContent: 'center'}}
           >
-            <Button
-            variant='contained'
-            color='secondary'
-            sx={{mx: 1}}
+            <Link
+            to='/band-members'
             >
-              BandMembers
-            </Button>
-          </Link>
-          <Link
-          to='/home'
-          >
-            <Button
-            variant='contained'
-            color='secondary'
-            sx={{mx: 1}}
+              <Button
+              variant='contained'
+              color='secondary'
+              sx={{mx: 1}}
+              >
+                BandMembers
+              </Button>
+            </Link>
+            <Link
+            to='/home'
             >
-              Home
-            </Button>
-          </Link>
-        </Toolbar>
-      </AppBar>
-    </Box>
+              <Button
+              variant='contained'
+              color='secondary'
+              sx={{mx: 1}}
+              >
+                Home
+              </Button>
+            </Link>
+          </Toolbar>
+        </AppBar>
   );
 }
