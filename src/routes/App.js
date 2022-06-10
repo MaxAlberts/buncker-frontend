@@ -24,11 +24,11 @@ useEffect(() => {
   return (
     <div>
       <Container 
-      sx={{justifyContent: 'center'}} 
+      sx={{justifyContent: 'center', backgroundColor: 'white'}} 
       align='center'
-      position='fixed'
+      maxWidth='false'      
       >
-        <img src={image} width='80%' height='300' />
+        <img src={image} width='40%' height='25%' />
       </Container>
       <ButtonAppBar sx={{height: 5000}}/>
       <Outlet/>

@@ -11,28 +11,24 @@ export default function ButtonAppBar() {
           <Toolbar
           sx={{justifyContent: 'center'}}
           >
-            <Link
-            to='/band-members'
-            >
               <Button
+              component={Link}
+              to={'/band-members'}
               variant='contained'
               color='secondary'
               sx={{mx: 1}}
               >
                 BandMembers
               </Button>
-            </Link>
-            <Link
-            to='/home'
-            >
               <Button
+              component={Link}
+              to={'/home'}
               variant='contained'
               color='secondary'
               sx={{mx: 1}}
               >
                 Home
               </Button>
-            </Link>
           </Toolbar>
         </AppBar>
   );
