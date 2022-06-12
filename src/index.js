@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom/client';
 import App from './routes/App';
 import BandMembers from './routes/BandMembers';
 import Home from './routes/Home';
+import Media from './routes/Media';
+import Tour from './routes/Tour';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from '@mui/material/styles';
@@ -17,8 +19,11 @@ root.render(
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<App />}>
+            <Route index element={<Home />} />
+            <Route path="home" element={<Home />} /> 
             <Route path="band-members" element={<BandMembers />} />
-            <Route path="home" element={<Home />} />
+            <Route path="tour" element={<Tour />} /> 
+            <Route path="media" element={<Media />} />
           </Route>
         </Routes>
       </BrowserRouter>
