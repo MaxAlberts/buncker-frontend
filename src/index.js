@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './routes/App';
-import BandMembers from './routes/BandMembers';
-import Home from './routes/Home';
-import Media from './routes/Media';
-import Tour from './routes/Tour';
+import BandMembers from './routes/BandMembersPage';
+import Home from './routes/HomePage';
+import Media from './routes/MediaPage';
+import Tour from './routes/TourPage';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from '@mui/material/styles';

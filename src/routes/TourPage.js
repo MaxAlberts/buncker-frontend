@@ -1,7 +1,7 @@
 import { Typography } from '@mui/material'
 
 
-function Home() {
+function TourPage() {
   return (
     <div>
     <Typography
@@ -9,10 +9,10 @@ function Home() {
     component='h1'
     align='center'
     color='secondary'
-    > Media
+    > Tour
     </Typography>
     </div>
   );
 }
 
-export default Home;
+export default TourPage;
