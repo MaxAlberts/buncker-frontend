@@ -1,11 +1,11 @@
 import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
-import HomeIcon from '@mui/icons-material/Home';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Button from '@mui/material/Button';
-import { Link } from 'react-router-dom';
 import Menu from '@mui/material/Menu';
+import { MENU_LIST } from '../entities/MenuList'
+import MenuButton from '../components/MenuButton'
 import MenuItem from '@mui/material/MenuItem';
 import { Box } from '@mui/material';
 
@@ -45,6 +45,7 @@ export default function ButtonAppBar() {
             <MenuIcon/>
           </Button>
           <Menu
+          color='secondary'
           id="basic-menu"
           anchorEl={anchorEl}
           open={open}
@@ -53,9 +54,17 @@ export default function ButtonAppBar() {
             'aria-labelledby': 'basic-button',
           }}
           >
-          <MenuItem onClick={handleClose}>Profile</MenuItem>
-          <MenuItem onClick={handleClose}>My account</MenuItem>
-          <MenuItem onClick={handleClose}>Logout</MenuItem>
+            {
+              MENU_LIST.map( pageNavigationItem =>
+                <MenuItem onClick={handleClose}>
+                  <MenuButton 
+                  link={pageNavigationItem.linkName} 
+                  buttonSX={buttonSX}
+                  child={pageNavigationItem.displayName}
+                  />
+                </MenuItem>
+              )
+            }
           </Menu>
         </Toolbar>
       </Box>
@@ -66,42 +75,15 @@ export default function ButtonAppBar() {
         <Toolbar
         sx={{justifyContent: 'center'}}
         >
-          <Button
-          component={Link}
-          to={'/home'}
-          variant='text'
-          color='tertiary'
-          sx={buttonSX}
-          >
-            <HomeIcon/>
-          </Button>
-          <Button
-          component={Link}
-          to={'/band-members'}
-          variant='text'
-          color='tertiary'
-          sx={buttonSX}
-          >
-            BandMembers
-          </Button>
-          <Button
-          component={Link}
-          to={'/tour'}
-          variant='text'
-          color='tertiary'
-          sx={buttonSX}
-          >
-            Tour
-          </Button>
-          <Button
-          component={Link}
-          to={'/media'}
-          variant='text'
-          color='tertiary'
-          sx={buttonSX}
-          >
-            Media
-          </Button>
+          {
+            MENU_LIST.map( pageNavigationItem =>
+              <MenuButton 
+              link={pageNavigationItem.linkName} 
+              buttonSX={buttonSX}
+              child={pageNavigationItem.displayName}
+              />
+            )
+          }
         </Toolbar>
       </Box>
       

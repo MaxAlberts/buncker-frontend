@@ -1,7 +1,7 @@
 import { Typography } from '@mui/material'
 
 
-function MediaPage() {
+function ContactPage() {
   return (
     <div>
     <Typography
@@ -9,10 +9,10 @@ function MediaPage() {
     component='h1'
     align='center'
     color='secondary'
-    > Media
+    > Contact
     </Typography>
     </div>
   );
 }
 
-export default MediaPage;
+export default ContactPage;

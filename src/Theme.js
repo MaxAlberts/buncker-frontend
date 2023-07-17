@@ -1,6 +1,17 @@
 import { createTheme } from '@mui/material/styles';
 
 const theme = createTheme({
+    components: {
+        MuiMenu: {
+            styleOverrides: {
+                list: {
+                    '&[role="menu"]': {
+                        backgroundColor: '#000000'
+                    },
+                },
+            },
+        },
+    },
     palette: {
       primary: {
           main: '#000000',
