@@ -8,6 +8,7 @@ import { MENU_LIST } from '../entities/MenuList'
 import MenuButton from '../components/MenuButton'
 import MenuItem from '@mui/material/MenuItem';
 import { Box } from '@mui/material';
+import Logo from '../components/Logo';
 
 export default function ButtonAppBar() {
   const buttonSX = {
@@ -27,7 +28,7 @@ export default function ButtonAppBar() {
   return (
     <AppBar position="sticky">
       <Box
-      sx={{display: { xs: 'block', md: 'none' }}}
+      sx={{display: { xs: 'grid', md: 'none' }, gridTemplateColumns: { xs: 'repeat(3, 1fr)', md: 'none' }, justifyContent: 'center'}}
       >
         <Toolbar
         sx={{justifyContent: 'left'}}
@@ -67,6 +68,8 @@ export default function ButtonAppBar() {
             }
           </Menu>
         </Toolbar>
+        {/* <Logo preserveAspectRatio="xMaxYMid meet" viewBox="-1000 0 3400 400"/> */}
+        <Logo preserveAspectRatio="xMaxYMid meet" viewBox="-350 -50 1800 500"/>
       </Box>
       
       <Box

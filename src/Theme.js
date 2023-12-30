@@ -10,21 +10,22 @@ const theme = createTheme({
                     },
                 },
             },
-        },
+        }
     },
     palette: {
       primary: {
           main: '#000000',
       },
       secondary: {
-          main: '#607d8b',
+          main: '#282a36',
       },
       tertiary: {
           main: '#fafafa',
           contrastText: '#607d8b'
       },
       background: {
-          default: '#fafafa',
+        //   default: '#525462',
+        default: '#282a36'
       }
     },
 });

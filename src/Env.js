@@ -1,8 +1,11 @@
 export const CMSURL = 'http://' + getCMSHostIp() + ':' + getCMSPort()
+export const TOKEN = process.env.REACT_APP_TOKEN
+// export const TOKEN = window._env_.REACT_APP_TOKEN
 
 function getCMSHostIp() {
-    // var ip = process.env.REACT_APP_CMSHOST
-    var ip = '127.0.0.1'
+    // var ip = window._env_.REACT_APP_CMSHOST
+    var ip = process.env.REACT_APP_CMSHOST
+    // var ip = '127.0.0.1'
     if (ip) {
         return ip
     } else {
@@ -11,8 +14,9 @@ function getCMSHostIp() {
 }
 
 function getCMSPort() {
-    // var port = process.env.REACT_APP_CMSPORT
-    var port = '1337'
+    // var port = window._env_.REACT_APP_CMSPORT
+    var port = process.env.REACT_APP_CMSPORT
+    // var port = '1337'
     if (port) {
         return port
     } else {

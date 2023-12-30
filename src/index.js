@@ -23,7 +23,7 @@ root.render(
             <Route index element={<Home />} />
             {
               MENU_LIST.map( pageNavigationItem =>
-                <Route path={pageNavigationItem.linkName} element={pageNavigationItem.pageElement}/>
+                <Route key={pageNavigationItem.displayName} path={pageNavigationItem.linkName} element={pageNavigationItem.pageElement}/>
               )
             }
           </Route>

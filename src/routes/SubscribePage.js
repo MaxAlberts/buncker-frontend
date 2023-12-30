@@ -1,17 +1,23 @@
-import { Typography } from '@mui/material'
+import { Typography, Grid } from '@mui/material'
 
 
 function SubscribePage() {
   return (
-    <div>
-    <Typography
-    variant='h1'
-    component='h1'
-    align='center'
-    color='secondary'
-    > Subscribe
-    </Typography>
-    </div>
+      <Grid
+        container
+        spacing={0}
+        direction="column"
+        alignItems="center"
+        justify="center"
+        sx={{pt: "25px", pb: "100px"}}
+      >
+        <Typography
+        variant='h4'
+        component='h1'
+        > 
+        Subscribe
+        </Typography>
+      </Grid>
   );
 }
 

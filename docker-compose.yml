@@ -1,0 +1,12 @@
+version: '3.7'
+
+services:
+
+  sample-prod:
+    container_name: buncker-frontend
+    # build:
+    #   context: .
+    #   dockerfile: ./docker/Dockerfile
+    image: buncker-frontend:snapshot
+    ports:
+      - '3000:80'

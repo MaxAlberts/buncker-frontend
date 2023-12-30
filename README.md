@@ -2,6 +2,8 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+Configure the auth token for the CMS by setting 'REACT_APP_TOKEN'
+
 ## Available Scripts
 
 In the project directory, you can run:
